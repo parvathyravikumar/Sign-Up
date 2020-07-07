@@ -33,7 +33,7 @@ export class SignupComponent implements OnInit {
       var lname: string  = g.get('lastName').value;
       var pass: string  = g.get('password').value;
 
-      if(pass !="" && (pass.includes(fname) || pass.includes(lname))){
+      if(pass != "" && fname != "" && lname != "" && (pass.includes(fname) || pass.includes(lname))){
         alert("Password should not contain first name or last name");
         return{'mismatch': true};      
       }
