@@ -1,0 +1,36 @@
+<form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <label>*First Name :</label>
+        <input type="text" formControlName="firstName" class="form-control" [ngClass]="{ 'is-invalid': submitted && formTags.firstName.errors }" />
+        <div *ngIf="submitted && formTags.firstName.errors" class="invalid-feedback">
+          <div *ngIf="formTags.firstName.errors.required">First Name is required</div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>*Last Name :</label>
+        <input type="text" formControlName="lastName" class="form-control" [ngClass]="{ 'is-invalid': submitted && formTags.lastName.errors }" />
+        <div *ngIf="submitted &&formTags.lastName.errors" class="invalid-feedback">
+          <div *ngIf="formTags.lastName.errors.required">Last Name is required</div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>*Email :</label>
+        <input type="text" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && formTags.email.errors }" />
+        <div *ngIf="submitted && formTags.email.errors" class="invalid-feedback">
+          <div *ngIf="formTags.email.errors.required">Email is required</div>
+          <div *ngIf="formTags.email.errors.pattern">Email must be a valid email address</div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>*Password :</label>
+        <input type="password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && formTags.password.errors }" />
+        <div *ngIf="submitted && formTags.password.errors" class="invalid-feedback">
+          <div *ngIf="formTags.password.errors.required">Password is required</div>
+          <div *ngIf="formTags.password.errors.pattern">Password should have Uppercase letters,numbers and symbols</div>
+        
+        </div>
+      </div>
+      <div class="text-center">
+        <button class="btn btn-primary mr-1">Register</button>
+      </div>
+  </form>

@@ -1,0 +1,8 @@
+$button-color : #4d138c;
+.btn-primary{
+    color: #fff;
+    background-color: $button-color;
+    border: none;
+    background: -webkit-linear-gradient(top,#ad92c9,$button-color)!important;
+}
+  

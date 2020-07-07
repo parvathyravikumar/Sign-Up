@@ -1,0 +1,42 @@
+
+$bg-header : #4d138c;
+$text-color : #ffffff;
+$bg-container :  #dedede;
+.header{
+    background-color: $bg-header;
+    color: $text-color;
+    h2{
+        text-align: center;
+        margin: 8px 0;
+    }
+}
+
+.container{
+    background-color: $bg-container;
+    width: 50%;
+    padding: 2%;
+    margin: 2% auto;
+}
+
+.mandatory{
+    text-align: center;
+    padding-top: 2%;
+    font-size: .6rem;
+    margin: 0;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 767px){
+    .container{     
+        background-color: $bg-container;
+        width:95%;
+    }
+}
+
+      
+@media screen and (max-width: 575px) {
+    .container{
+        background-color: $bg-container;
+        width: 95%;
+    }
+}
