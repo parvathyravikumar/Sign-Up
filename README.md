@@ -43,3 +43,4 @@ Developed using Visual studio (IDE)
 
 ## Back log
  Couldn't do unit test.
+ The username in password validation was working fine but error message was not showing in the page. So as a work around I gave an alert box to show messsage. 
